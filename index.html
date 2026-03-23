@@ -58,7 +58,7 @@
 			<div class="text-center">
 				<div class="author-img" style="background-image: url(images/snehashis.JPG);"></div>
 				<h1 id="colorlib-logo"><a href="index.html">Snehashis Ghosh</a></h1>
-				<span>svrddhig@gmail.com</span>
+				<span>svrddhig25@gmail.com</span>
 				<span class="position"><a href="#">Built</a> in California</span>
 			</div>
 			<nav id="colorlib-main-menu" role="navigation" class="navbar">
@@ -611,9 +611,18 @@
 					                  <i class="icon-pen2"></i>
 					               </div>
 					               <div class="timeline-label">
-					                  <h2><a href="#">Consultant Software Engineer Lead II</a> <span>2024 - Present (T-Mobile)</span></h2>
-					                  <p>Building T-Cloud. T-Mobile's personalized cloud services for the T-Mobile infrastructure.
-					                  </p>
+					                  <h2><a href="#">Software Engineer Lead II</a> <span>UST · Full-time</span></h2>
+					                  <div class="exp-body collapsed">
+					                  <ul>
+					                     <li>Leading platform-wide initiatives to modernize and scale T-Mobile's internal cloud provisioning and account management experiences, with a strong focus on frontend architecture, developer experience, and usability.</li>
+					                     <li>Built and led frontend architecture for T-Cloud, T-Mobile's private cloud platform on OpenShift, enabling scalable, self-service containerized deployments and significantly improving developer productivity.</li>
+					                     <li>Played a key role in building T-Mobile's next-generation Internal Developer Portal (IDP), a unified frontend control plane providing one-click access to infrastructure, services, CI/CD workflows, observability, and governance through golden-path automation, reducing developer time spent on repetitive infrastructure tasks by 20–40%, cutting onboarding time by 30–70%, and reducing service creation time from weeks to minutes.</li>
+					                     <li>Led the integration and customization of Strapi CMS, replacing Adobe Experience Manager for document and blog management, streamlining content workflows and resulting in $100K+ annual savings in licensing and support costs.</li>
+					                     <li>Designed and implemented an AI-powered document intelligence platform using OCR pipelines and Retrieval-Augmented Generation (RAG), enabling natural language querying and semantic search over enterprise documents, reducing document retrieval time by 85%, improving information accuracy by 40%, and increasing team productivity by 25%.</li>
+					                     <li>Integrated Novu with T-Mobile's SMTP infrastructure to deliver real-time, multi-channel notifications for internal platforms, eliminating third-party email delivery services and saving $5K–$10K+ annually.</li>
+					                  </ul>
+					                  </div>
+					               <button class="exp-view-more" onclick="toggleExp(this)"><span class="exp-view-more-text">View more</span><svg class="exp-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
 					               </div>
 					            </div>
 					         </article>
@@ -627,9 +636,12 @@
 
 					               <div class="timeline-label">
 					                  <h2><a href="#">Staff Software Development Engineer</a> <span>Aug/2019 - Dec/2023 (Fortinet R&D HQ)</span></h2>
-					                  <p>Develop, Design multiple application accross the R&D division. Achieve scalability, 
+					                  <div class="exp-body collapsed">
+					                  <p>Develop, Design multiple application accross the R&D division. Achieve scalability,
 					                  	 optimize existing product. Work on a cross functional Environment.
 					                  </p>
+					                  </div>
+					               <button class="exp-view-more" onclick="toggleExp(this)"><span class="exp-view-more-text">View more</span><svg class="exp-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
 					               </div>
 					            </div>
 					         </article>
@@ -642,12 +654,15 @@
 					               </div>
 					               <div class="timeline-label">
 					               	<h2><a href="#">Software Engineer II</a> <span>2015-2019 (Equilar Inc)</span></h2>
+					               	<div class="exp-body collapsed">
 					                  	<p>Pioneered in building BoardEdge mobile app team, elevating user engagement by 45%.</p>
 										<p>Pioneered in building BoardEdge web application, connecting company executives, 
 											law farms, board members. Build complex network and connectivity graph to easily 
 											find executive 1st, 2nd, 3rd degree of connections. Build tools for board members & 
 											executives to propose their intention for board membership. 
 											Build Predictive Diversity Network tool for boards to find prospective members.</p>
+					               	</div>
+					               <button class="exp-view-more" onclick="toggleExp(this)"><span class="exp-view-more-text">View more</span><svg class="exp-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
 					               </div>
 					            </div>
 					         </article> 
@@ -659,7 +674,10 @@
 					               </div>
 					               <div class="timeline-label">
 					               	<h2><a href="#">Professional Intern</a> <span>2014-2014 (Walt Disney World)</span></h2>
+					               	<div class="exp-body collapsed">
 					                  <p>Application development, testing. Support key leadership and management with the supply chain and Walt Disney World Merchandising. Write structures queries for aggregating data accross different merchandising division.</p>
+					               	</div>
+					               <button class="exp-view-more" onclick="toggleExp(this)"><span class="exp-view-more-text">View more</span><svg class="exp-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
 					               </div>
 					            </div>
 					         </article> 
@@ -697,6 +715,78 @@
 	
 	<!-- MAIN JS -->
 	<script src="js/main.js"></script>
+
+	<style>
+		.exp-body {
+			overflow: hidden;
+			max-height: 0;
+			opacity: 0;
+			transition: max-height 0.4s ease, opacity 0.3s ease;
+		}
+		.exp-body.open {
+			max-height: 2000px;
+			opacity: 1;
+		}
+		.exp-view-more {
+			display: inline-flex;
+			align-items: center;
+			gap: 5px;
+			margin-top: 10px;
+			padding: 5px 14px;
+			background: none;
+			border: 1.5px solid #e0e0e0;
+			border-radius: 20px;
+			font-size: 12px;
+			font-weight: 600;
+			color: #a0a0a0;
+			letter-spacing: 0.5px;
+			cursor: pointer;
+			transition: color 0.2s, border-color 0.2s, background 0.2s;
+		}
+		.exp-view-more:hover {
+			color: #555;
+			border-color: #bbb;
+			background: #f8f8f8;
+		}
+		.exp-chevron {
+			width: 13px;
+			height: 13px;
+			stroke: currentColor;
+			stroke-width: 2.5;
+			fill: none;
+			transition: transform 0.3s ease;
+		}
+		.exp-view-more.open .exp-chevron {
+			transform: rotate(180deg);
+		}
+		.exp-view-more.open .exp-view-more-text::before {
+			content: "View less";
+		}
+		.exp-view-more-text::before {
+			content: "View more";
+		}
+		.exp-view-more-text {
+			font-size: 0;
+		}
+		.exp-view-more-text::before {
+			font-size: 12px;
+		}
+	</style>
+
+	<script>
+		function toggleExp(btn) {
+			var label = btn.closest('.timeline-label');
+			var body = label.querySelector('.exp-body');
+			var isOpen = body.classList.contains('open');
+			if (isOpen) {
+				body.classList.remove('open');
+				btn.classList.remove('open');
+			} else {
+				body.classList.add('open');
+				btn.classList.add('open');
+			}
+		}
+	</script>
 
 	</body>
 </html>
